@@ -1,0 +1,47 @@
+class Icecream:
+  name="  Sai Ice shop"
+  building_colour="  blue colour building"
+  address="  71, KTR Road, Chennai=17"
+  con_no="  9150238658"
+  mail="  saiiceshop@gmail.com"
+  
+
+  def Sales_items(self):
+    print(" Types -->\n \n *** Stick \n *** Cone \n *** Cup \n")
+    print(" Flavours -->\n \n *** Chocolate\n *** Vannila \n *** Strawberry")
+
+  def Menu_card(self):
+    print("\nMenu Cards : ")
+    l=['1-->Stick Chocolate :Rs.20','2-->Stick Vennila :Rs.20','3-->Stick Strawberry :Rs.20', '4-->Cone Chocolate :Rs.30','5-->Cone Vennila :Rs.30', '6-->Cone Strawberry:Rs.30','7-->Cup chocolate :Rs.10','8-->Cup Vennila :Rs.10','9-->Cup Strawberry :Rs.10']
+    for i in range(9):
+      print(l[i])
+
+  def Toppings(self):
+    print("1-->Cips ,2-->Fruity,3-->Cherish")
+    
+
+obj=Icecream()
+print("The details of the shop:")
+print(obj.name)
+print(obj.building_colour)
+print(obj.address)
+print(obj.con_no)
+print(obj.mail)
+
+print("\nSales Items :")
+obj.Sales_items()
+obj.Menu_card()
+print("\nEnter your option to be ordered from the menu :")
+opt=int(input())
+if opt==1 or opt==4 or  opt==7:
+  obj.Toppings()
+  n=int(input("Enter a topping:"))
+  print("Amount : Rs.40. Your oder is successfully completed!\nThank you!")
+elif opt==2 or opt==3:
+  print("Amount:Rs.20.Your oder is successfully completed!")
+elif opt==5 or opt==6:
+  print("Amount:Rs.30.Your oder is successfully completed! \nThank you!")
+elif opt==8 or opt==9:
+  print("Amount:Rs.10.Your oder is successfully completed! \nThank you!")
+else:
+  print("Your option is not in the list. Please provide valid option")
